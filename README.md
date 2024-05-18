@@ -26,7 +26,9 @@ Treasure Chest's http paymentserver is running. The `handleURIOrFile` is reactin
 
 At that point its is validating the `recipient.address` in `IsValidDestinationString` where it is failing to `DecodeDestination`, despite being a valid sapling address. If address calidation is resolved URI parsing should be functional.
 
-Unkown if it has address prefix missmatch from what is defined in the chain params, or something with the checksum. Maybe add debug to trace the data back through the process to see if data is passing correctly, and where exactly it is failing to validate.  
+Unkown if it has address prefix missmatch from what is defined in the chain params, branchid, something with the checksum. Maybe add debug to trace the data back through the process to see if data is passing correctly, and where exactly it is failing to validate.  
+
+**EDIT:** BranchId was addressed in [873eb4a](https://github.com/PirateNetwork/pirate/commit/873eb4a2716497e30b4df9c52306151585dd397f), now seems to pass address validation, but process fails. A empty Treasure Chest dialog opens and immediately closes. Nothing reported in daemon terminal output of debug.log.
 
 ---
 
