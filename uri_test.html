@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pirate URI Test</title>
+    <style>
+        body {
+          background-color: #333;
+          color:#cecece;
+          text-align: center;
+          font-family: 'Comforta','Poppins', Verdana, Arial, sans-serif;
+          padding-top: 40px;
+          font-size: 18px;
+    
+        }
+        h1 {
+          color: #dec477;
+          font-weight: 200;
+        }
+        input {
+            border: 1px solid #000;
+            background-color: #f0f0f0;
+            padding: 5px 12px;
+            box-shadow: 3px 3px 4px #00000094;
+            font-size: 13px;
+        }
+        button {
+            cursor: pointer;
+            color: #000;
+            padding: 8px 20px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function generateAndOpenURI() {
+            var address = document.getElementById('address').value;
+            var amount = document.getElementById('amount').value;
+            var memo = encodeURIComponent(document.getElementById('memo').value); // URL-encode the memo
+
+            if (!amount || isNaN(amount) || parseFloat(amount) <= 0) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+
+            // Construct the pirate URI
+            var uri = `pirate:${address}?amount=${amount}&memo=${memo}`;
+
+            // Open the URI
+            window.location.href = uri;
+        }
+    </script>
+</head>
+<body>
+    <h1>Pirate URI Test Page</h1>
+    <p>Test the pirate URI handling:</p>
+    <form onsubmit="generateAndOpenURI(); return false;">
+        <label for="address">Destination Address:</label><br>
+        <input style="width:500px;" type="text" id="address" value="zs178270x3hhlztymvl0q5cht5jfn66ac845rp5gvdvw7prpq4y37qtgq7zhw5l9tf9e5xms5jt8lj"><br><br>
+        
+        <label for="memo">Memo:</label><br>
+        <textarea id="memo" style="height: 100px; width: 500px;">invoice1</textarea><br><br>
+
+        <label for="amount">Amount:</label><br>
+        <input style="width:48px" type="text" id="amount" value="0.1"><br><br>
+        
+        
+        <button type="submit">Pay with ARRR!</button>
+    </form>
+</body>
+</html>
