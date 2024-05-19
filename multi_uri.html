@@ -2,7 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Multi-Payment URI test</title>
+<title>Multi-Payment URI Test</title>
+<style>
+    .uri-display {
+        width: 100%; /* Adjust width as needed */
+        max-width: 700px;
+        overflow: auto; /* Enables scrolling */
+        white-space: nowrap; /* Keeps the URI on one line until line break is needed */
+        margin-bottom: 20px; /* Adds some space below the div */
+    }
+</style>
 <script>
 function parseAndRedirectURI() {
     var uri = "pirate:?address=zs178270x3hhlztymvl0q5cht5jfn66ac845rp5gvdvw7prpq4y37qtgq7zhw5l9tf9e5xms5jt8lj&amount=123.456&address.1=zs178270x3hhlztymvl0q5cht5jfn66ac845rp5gvdvw7prpq4y37qtgq7zhw5l9tf9e5xms5jt8lj&amount.1=0.789&memo.1=VGhpcyBpcyBhIHVuaWNvZGUgbWVtbyDinKjwn6aE8J-PhvCfjok";
@@ -22,13 +31,17 @@ function parseAndRedirectURI() {
 </script>
 </head>
 <body>
-<h1>Multi-Payment URI test</h1>
+<h1>Multi-Payment URI Test</h1>
+
+<pre>A URI of the form pirate:&lt;address&gt;?...
+MUST be considered equivalent to a URI of the form pirate:?address=&lt;address&gt;&...
+where &lt;address&gt; is an instance of a pirate sapling address</pre>
+
 <p>For testing URI formatted with multiple payments as formatted below:</p>
-<p>
-pirate:?address=zs178270x3hhlztymvl0q5cht5jfn66ac845rp5gvdvw7prpq4y37qtgq7zhw5l9tf9e5xms5jt8lj&amount=123.456&address.1=zs178270x3hhlztymvl0q5cht5jfn66ac845rp5gvdvw7prpq4y37qtgq7zhw5l9tf9e5xms5jt8lj&amount.1=0.789&memo.1=VGhpcyBpcyBhIHVuaWNvZGUgbWVtbyDinKjwn6aE8J-PhvCfjok
-</p>
+<div class="uri-display">
+    pirate:?address=zs178270x3hhlztymvl0q5cht5jfn66ac845rp5gvdvw7prpq4y37qtgq7zhw5l9tf9e5xms5jt8lj&amount=123.456&address.1=zs178270x3hhlztymvl0q5cht5jfn66ac845rp5gvdvw7prpq4y37qtgq7zhw5l9tf9e5xms5jt8lj&amount.1=0.789&memo.1=VGhpcyBpcyBhIHVuaWNvZGUgbWVtbyDinKjwn6aE8J-PhvCfjok
+</div>
 <button onclick="parseAndRedirectURI()">Parse URI and Redirect</button>
 <div id="output" style="white-space: pre-wrap;"></div>
 </body>
 </html>
-
