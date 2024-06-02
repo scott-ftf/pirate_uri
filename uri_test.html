@@ -53,6 +53,7 @@
             var amount = document.getElementById('amount').value;
             var memo = encodeURIComponent(document.getElementById('memo').value);
             var message = encodeURIComponent(document.getElementById('message').value);
+            var label = encodeURIComponent(document.getElementById('label').value);
 
             if (!amount || isNaN(amount) || parseFloat(amount) <= 0) {
                 alert("Please enter a valid amount.");
@@ -60,7 +61,7 @@
             }
 
             // Construct the pirate URI
-            var uri = `pirate:${address}?amount=${amount}&memo=${memo}&message=${message}`;
+            var uri = `pirate:${address}?amount=${amount}&memo=${memo}&message=${message}&label=${label}`;
 
             // Display the URI
             document.getElementById('uri-display').innerText = uri;
@@ -83,6 +84,9 @@
         
         <label for="message">Message:</label><br>
         <input type="text" id="message" value="Thank you for your payment!"><br>
+
+        <label for="label">Label:</label><br>
+        <input type="text" id="label" value="Test Payment"><br>
         
         <label for="amount">Amount:</label><br>
         <input style="width:48px" type="text" id="amount" value="0.1"><br>
