@@ -56,7 +56,7 @@ The scheme component ("pirate:") is case-insensitive, and implementations must a
 #### address
 A valid Pirate Chain [[4] Sapling payment address](https://zips.z.cash/protocol/protocol.pdf#saplingpaymentaddrencoding) string, using [[5] Bech32](https://zips.z.cash/zip-0173)
 
-Sprout addresses are not supported in payment requests as they have been deprecation. Additionally, Transparent addresses are also unsupported in payment requests, as the Pirate Chain network does not permit transparent addresses for peer-to-peer transactions in user wallets.
+Sprout addresses are not supported in payment requests as they have been deprecated. Additionally, Transparent addresses are also unsupported in payment requests, as the Pirate Chain network does not permit transparent addresses for peer-to-peer transactions in user wallets.
 
 #### amount 
 If an amount is provided, it MUST be specified in decimal ARRR. If a decimal fraction is present then a period (.) MUST be used as the separating character to separate the whole number from the decimal fraction, and both the whole number and the decimal fraction MUST be nonempty. No other separators (such as commas for grouping or thousands) are permitted. Leading zeros in the whole number or trailing zeros in the decimal fraction are ignored. There MUST NOT be more than 8 digits in the decimal fraction.
