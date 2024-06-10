@@ -1,7 +1,7 @@
 # Pirate URI Scheme
 
 
-## Absctract
+## Abstract
 This document describes the current Pirate Chain URI scheme that is recognized by the current [PirateWallet-lite](https://github.com/PirateNetwork/PirateWallet-Lite) and [Treasure Chest](https://github.com/PirateNetwork/pirate) wallets. 
 
 ## Motivation
