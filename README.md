@@ -8,9 +8,9 @@ This document describes the current Pirate Chain URI scheme that is recognized b
 The purpouse of the URI scheme is to enable users to easily make payments by simply clicking links on webpages or scanning QR codes
 
 ## Description
-The current Pirate Chain URI scheme is base loosely off the Bitcoin [[1] BIP21](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) proposal with ceretain modifications. 
+The current Pirate Chain URI scheme is based loosely off the Bitcoin [[1] BIP21](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) proposal with certain modifications. 
 
-* **Note:** *Future iterations are slated to bring the URI handeling in line with the Z-cash [[2] ZIP-0321](https://zips.z.cash/zip-0321) proposal. Features of this scheme, such as multipl epayment handling, is not yet supported.*
+* **Note:** *Future iterations are slated to bring the URI handling in line with the Z-cash [[2] ZIP-0321](https://zips.z.cash/zip-0321) proposal. Features of this scheme, such as multiple payment handling, is not yet supported.*
 
 ## URI scheme handler
 Before a Pirate Chain wallet can respond to URI links, the appropriate URI scheme handler must be registered with the users operating system.
@@ -23,7 +23,7 @@ For instructions on registering a URI scheme handler, please refer to the offici
 
 * [Ubuntu: Gnome Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html)
 
-**NOTE:** *Specific instructions for registering Pirate Chain wallets wil be provided in a update to this readme*
+**NOTE:** *Specific instructions for registering Pirate Chain wallets will be provided in a later update to this readme*
 
 
 ## General Format
