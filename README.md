@@ -77,10 +77,10 @@ Label for an address (e.g. name of receiver). If a label is present at a paramin
 * **Note:** *Currently the Treasure Chest and Piratewallet-lite wallets do not display the label paramater*
 
 #### others
-optional, for future extensions. Currently ignored by the wallets
+Optional, for future extensions. Currently ignored by the wallets
 
 ## URI Example Implementation
-simple webpage to serve a form that constructs a uri link for testing. Can be accessed at: [Pirate URI Test Page](https://scott-ftf.github.io/pirate_uri/uri.html)
+simple webpage to serve a form that constructs a URI link for testing. Can be accessed at: [Pirate URI Test Page](https://scott-ftf.github.io/pirate_uri/uri.html)
 
 ## Examples
 
@@ -90,7 +90,7 @@ Request payment of `1` ARRR
 pirate:zs178270x3hhlztymvl0q5cht5jfn66ac845rp5gvdvw7prpq4y37qtgq7zhw5l9tf9e5xms5jt8lj?amount=1
 ```
 
-Request payment amoun of `0.1` ARRR, with the memo `Invoice 123` and the message `Thank you for your payment!` 
+Request payment amount of `0.1` ARRR, with the memo `Invoice 123` and the message `Thank you for your payment!` 
 
 ```
 pirate:zs178270x3hhlztymvl0q5cht5jfn66ac845rp5gvdvw7prpq4y37qtgq7zhw5l9tf9e5xms5jt8lj?amount=0.1&memo=invoice%20123&message=Thank%20you%20for%20your%20payment!&label=Test%20Payment
